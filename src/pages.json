@@ -1,16 +1,111 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/tab-home/tab-home",
+      "style": {
+        "app-plus": {
+          "titleNView": {
+            "backgroundColor": "#FFF",
+            "buttons": [{
+                "color": "#444",
+                "float": "left",
+                "fontSrc": "static/fonts/iconfont.ttf",
+                "text": "\ue6ef"
+              },
+              {
+                "color": "#444",
+                "float": "right",
+                "fontSrc": "static/fonts/iconfont.ttf",
+                "text": "\ue752"
+              }
+            ],
+            "searchInput": {
+              "align": "center",
+              "backgroundColor": "#f1f1f1",
+              "borderRadius": "5px",
+              "placeholder": "vue vs react",
+              "placeholderColor": "#999"
+            }
+          }
+        },
+        "h5": {
+          "titleNView": {
+            "backgroundColor": "#FFF",
+            "searchInput": {
+              "align": "center",
+              "backgroundColor": "#f1f1f1",
+              "borderRadius": "5px",
+              "placeholder": "vue vs react",
+              "placeholderColor": "#999"
+            }
+          }
+        },
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 100
+      }
+    }, {
+      "path": "pages/tab-vip/tab-vip",
+      "style": {}
+    }, {
+      "path": "pages/tab-add/tab-add",
+      "style": {}
+    }, {
+      "path": "pages/tab-message/tab-message",
+      "style": {
+        "titleNView": false
+      }
+    }, {
+      "path": "pages/tab-my/tab-my",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    }, {
+      "path": "pages/topic-detail/topic-detail",
+      "style": {
+        "navigationBarTitleText": "详情"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#444444",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/tab-home/tab-home",
+        "text": "首页",
+        "iconPath": "static/tab-icon/home.png",
+        "selectedIconPath": "static/tab-icon/home-fill.png"
+      },
+      {
+        "pagePath": "pages/tab-vip/tab-vip",
+        "text": "会员",
+        "iconPath": "static/tab-icon/vip.png",
+        "selectedIconPath": "static/tab-icon/vip-fill.png"
+      },
+      {
+        "pagePath": "pages/tab-add/tab-add",
+        "iconPath": "static/tab-icon/add.png",
+        "selectedIconPath": "static/tab-icon/add.png"
+      },
+      {
+        "pagePath": "pages/tab-message/tab-message",
+        "text": "消息",
+        "iconPath": "static/tab-icon/remind.png",
+        "selectedIconPath": "static/tab-icon/remind-fill.png"
+      },
+      {
+        "pagePath": "pages/tab-my/tab-my",
+        "text": "我的",
+        "iconPath": "static/tab-icon/account.png",
+        "selectedIconPath": "static/tab-icon/account-fill.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "知乎",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }
