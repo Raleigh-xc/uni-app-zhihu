@@ -1,5 +1,8 @@
 <template>
   <view>
+    <view>pushClick is: {{$store.state.pushClick}}</view>
+    <view>pushReceive is: {{$store.state.pushReceive}}</view>
+    <view>count is: {{$store.state.count}}</view>
     <block v-for="item in total" :key="item">
       <view class="border">
         <topic-item :index="item" />
@@ -20,6 +23,7 @@
       }
     },
     onLoad() {
+      // console.log(getCurrentPages())
       uni.getSystemInfo({
         success: function(res) {
           console.log(JSON.stringify(res));
@@ -35,6 +39,9 @@
       uni.showTabBarRedDot({
         index: 4,
       });
+    },
+    onShow() {
+      getApp().globalData.lastTab = '../tab-home/tab-home';
     },
     onPullDownRefresh() {
       console.log('onPullDownRefresh ~~~');

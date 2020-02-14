@@ -44,6 +44,9 @@
         index: 3
       })
     },
+    onShow() {
+      getApp().globalData.lastTab = '../tab-message/tab-message';
+    },
     methods: {
       handleTabChange(index) {
         this.tabIndex = index

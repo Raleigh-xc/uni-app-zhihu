@@ -57,7 +57,7 @@
     }, {
       "path": "pages/tab-my/tab-my",
       "style": {
-        "navigationBarTitleText": "我的"
+        "titleNView": false
       }
     }, {
       "path": "pages/topic-detail/topic-detail",
